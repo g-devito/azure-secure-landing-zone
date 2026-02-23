@@ -32,8 +32,8 @@ module dns 'modules/dns.bicep' = {
   }
 }
 
-module postgres 'modules/postgres.bicep' = {
-  name: 'postgres-deploy'
+module db 'modules/db.bicep' = {
+  name: 'db-deploy'
   params: {
     rgLocation: rgLocation
     adminPassword: kv.getSecret('dbPwd')
