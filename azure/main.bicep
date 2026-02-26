@@ -53,3 +53,9 @@ module vm 'modules/vm.bicep' = [for config in items(vmConfig): {
     vmPwd: kv.getSecret('vmPwd')
   }
 }]
+
+module policies 'modules/policy.bicep' = {
+  params: {
+    rgLocation: rgLocation
+  }
+}
